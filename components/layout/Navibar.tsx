@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
-import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
+import Container from "@/components/ui/Container";
 
 const navLinks = [
   { label: "Início", href: "#inicio" },
@@ -32,7 +32,7 @@ export default function Navibar() {
       },
       {
         threshold: 0.6,
-      }
+      },
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -44,7 +44,6 @@ export default function Navibar() {
     <nav className="fixed top-0 left-0 z-50 w-full border-b border-zinc-800/70 bg-black/80 shadow-2xl shadow-black/80 backdrop-blur-md">
       <Container>
         <div className="flex h-20 items-center justify-between">
-
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
             <Image
@@ -84,7 +83,9 @@ export default function Navibar() {
 
           {/* Botão Desktop */}
           <div className="hidden md:block">
-            <Button>Começar Agora</Button>
+            <Link href="/login">
+              <Button>Começar Agora</Button>
+            </Link>
           </div>
 
           {/* Botão Mobile */}
@@ -115,7 +116,6 @@ export default function Navibar() {
               )}
             </svg>
           </button>
-
         </div>
       </Container>
 
@@ -149,10 +149,7 @@ export default function Navibar() {
               );
             })}
 
-            <Button
-              className="mt-2 w-full"
-              onClick={() => setMenuOpen(false)}
-            >
+            <Button className="mt-2 w-full" onClick={() => setMenuOpen(false)}>
               Começar Agora
             </Button>
           </div>

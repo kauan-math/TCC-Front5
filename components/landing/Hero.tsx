@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
+import Image from "next/image";
 
 const stats = [
   {
@@ -89,38 +89,6 @@ export default function Hero() {
                 priority
                 className="w-full object-cover"
               />
-            </div>
-
-            {/* Card 1 */}
-            <div className="absolute -bottom-6 -left-6 rounded-2xl border border-zinc-800 bg-zinc-900/95 px-6 py-4 shadow-2xl backdrop-blur ">
-              <div className="flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-yellow-400/15 text-2xl ">
-                  👥
-                </div>
-
-                <div>
-                  <p className="text-sm text-zinc-400">Alunos ativos</p>
-
-                  <h3 className="text-2xl font-bold text-white">528</h3>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 2 */}
-            <div className="absolute -right-6 top-10 rounded-2xl border border-zinc-800 bg-zinc-900/95 px-6 py-4 shadow-2xl backdrop-blur">
-              <div className="flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-500/15 text-2xl">
-                  💰
-                </div>
-
-                <div>
-                  <p className="text-sm text-zinc-400">Receita mensal</p>
-
-                  <h3 className="text-2xl font-bold text-green-400">
-                    R$ 42.500
-                  </h3>
-                </div>
-              </div>
             </div>
           </div>
         </div>
